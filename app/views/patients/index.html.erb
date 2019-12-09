@@ -1,0 +1,9 @@
+<%= form_with(model: @patient, local: true, multipart: true) do |form| %>
+  <%= file_field_tag :file, class: "form-control" %>
+  <%= form.submit "Import", class: "btn btn-primary" %>
+<% end %>
+
+<hr/>
+
+<%= react_component("Patient", {patients: @patients}) %>
+
