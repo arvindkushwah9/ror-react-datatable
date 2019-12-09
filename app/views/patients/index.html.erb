@@ -1,6 +1,7 @@
-<%= form_with(model: @patient, local: true, multipart: true) do |form| %>
-  <%= file_field_tag :file, class: "form-control" %>
-  <%= form.submit "Import", class: "btn btn-primary" %>
+<%= form_with(model: @patient, local: true, multipart: true,class: "form-inline") do |form| %>
+  <label for="file">Upload CSV file:</label>
+  <%= file_field_tag :file, class: "form-control" %> 
+  <%= form.submit "Import Patients", class: "btn btn-primary" %>
 <% end %>
 
 <hr/>
